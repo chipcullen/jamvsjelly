@@ -37,8 +37,9 @@
       justify-content: center;
       align-items: center;
 
-      background-color: hsla(100, 100%, 50%, .8);
+      background-color: hsla(290, 100%, 20%, .8);
       backdrop-filter: blur(12px);
+      color: hsla(0, 100%, 100%, 1);
     }
 
     .mixture {
@@ -67,15 +68,27 @@
       max-height: 100%;
     }
 
-    .diagram #seeds {
+    #mixture,
+    #mixture-top {
+      transition: .3s fill ease-in;
+    }
+
+    #seeds {
       opacity: 0;
       transition: .3s opacity ease-in;
     }
 
-    [data-visible-element="jams"] .diagram #seeds {
+    [data-visible-element="jams"] #seeds {
       opacity: 1;
     }
 
+    [data-visible-element="jellies"] #mixture {
+      fill: hsla(270, 80%, 30%, 1);
+    }
+
+    [data-visible-element="jellies"] #mixture-top {
+      fill: hsla(270, 80%, 60%, 1);
+    }
 
     footer {
       min-height: 50vh;
